@@ -4,8 +4,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 50px;
-  transition: all .3s ease-in-out;
-
+  transition: all 0.3s ease-in-out;
 }
 
 /* Small */
@@ -19,7 +18,6 @@
   .container {
     width: 800px;
     padding-top: 100px;
-
   }
 }
 /* Large */
@@ -30,7 +28,6 @@
   }
 }
 .container h3,
-.container label{
-  color: #fff!important;
-
+.container label {
+  color: #fff !important;
 }
