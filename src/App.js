@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.css';
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React from 'react';
 import { treeData } from './data/data';
 import { Button, Checkbox, Form, Input, TreeSelect } from 'antd';
 
