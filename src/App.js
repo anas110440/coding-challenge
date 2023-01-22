@@ -9,7 +9,9 @@ const { SHOW_PARENT } = TreeSelect;
 function App() {
   const onFinish = (values) => {
     console.log('Success:', values);
-    localStorage.setItem(values)
+    localStorage.setItem(
+      'codingCallenge',
+      JSON.stringify(values))
   };
 
   const onFinishFailed = (errorInfo) => {
