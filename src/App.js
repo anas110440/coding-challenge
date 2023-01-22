@@ -1,17 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.css';
-import React from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { treeData } from './data/data';
 import { Button, Checkbox, Form, Input, TreeSelect } from 'antd';
 
 const { SHOW_PARENT } = TreeSelect;
 
 function App() {
+
+
+
+  
   const onFinish = (values) => {
     console.log('Success:', values);
     localStorage.setItem(
       'codingCallenge',
       JSON.stringify(values))
+   
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -23,10 +28,11 @@ function App() {
       <Form
         name="basic"
         style={{ width: '100%' }}
-        initialValues={{ remember: true }}
+        initialValues={ JSON.parse(localStorage.getItem('codingCallenge')) || {} }
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
+
       >
         <h3>
           Please enter your name and pick the Sectors you are currently involved
@@ -46,6 +52,7 @@ function App() {
             placeholder="Please select"
             treeData={treeData}
             allowClear
+            value={["0-0"]}
             treeCheckable={true}
             showCheckedStrategy={SHOW_PARENT}
           />
